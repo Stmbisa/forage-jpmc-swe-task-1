@@ -1,0 +1,204 @@
+From 5c02afc2f0671cc9967b6d2f8dc7eb4f881f0dcf Mon Sep 17 00:00:00 2001
+From: stmbisa <jcmbisa@gmail.com>
+Date: Thu, 9 May 2024 12:07:35 +0300
+Subject: [PATCH] modified client3.py to avoid errors with try and catch and
+ generated 5 tests for  and 1 test for
+
+---
+ __pycache__/client3.cpython-313.pyc | Bin 0 -> 2013 bytes
+ client3.py                          |  30 ++++++++---
+ client_test.py                      |  75 ++++++++++++++++++++++++++++
+ 3 files changed, 99 insertions(+), 6 deletions(-)
+ create mode 100644 __pycache__/client3.cpython-313.pyc
+
+diff --git a/__pycache__/client3.cpython-313.pyc b/__pycache__/client3.cpython-313.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..40dc0e834247aa616ef736a4d433e99a5ebba4f5
+GIT binary patch
+literal 2013
+zcma)7O>7%g5T4EM`X{!NI<}L>4e2H{YF*+u%}+@~N}9GVlv0y;ah0?y%*Nh0P91Oh
+zb_1#bDH0bKBnZ%oR6<a0t+=!jf=Y1c&w*=<QERpwf{>6ZE@{#O3K!<BZ4n4ajI?j&
+z&71k&%)EJTAGut$fVA-5(A1|6fM4jOO0J5q{v`u&2}BT?6F|zGA&fb%A*@(KIFTj1
+z$oYX-L>@=0WD_le;{fuv0Fu2Oq+0y=e#D_v<sNwc8US%f5Zzv0**u~L8})D2l;!9X
+zTXhl_-T5zCCR(#q+YbE|Wi^f}kG5^K{--T*w?a3N2FZ=lcVYA%$%2u3su=Se>b%59
+z8cCDXBsECh-3TgeZwJvTd54%f5N(pr<aVji<h4?h$sN7+DvAIny8#>^ls%o2758Wo
+zT|C8V66+}MujCfA{8dr(`=acZVp2??{vk~$l53mR^|`@ND5ECi%(SZMg9F_I-Jx^y
+z3OPTVP9A*Yt@L9&n?&V&s1slwz~Z;=MeQYMg&0IPuTvW&k*UU<Wn#>pvJ#SLnW||8
+zk&VGKsFU3QXDFIUG1SuxM9$2kg8C98@>%rxo1JB=U6zg2Ok&r@*hwqE_>)13WDR2X
+znh4x@!+2jGw+q_f49&r$GgzZC_0?EGMo<ChZaX1zU<wYhJ7J3XANFV$8Lrv~Y`OiT
+zL`}{o6hY2p1btc&vWk*alEQ0pW?s<*T@_MFRw1&E7D7_i<vBH-)dhpsbTx4{z(tS@
+ztFF$)C(}uTpCjpnQc=j-*@yIi1DwI86y4ybGODZ_wiC+vFd-^2YERKkOgX?C{JD8m
+zR|rkmup?O9#4_v%Qx*xWfJUn+P}=AUO{=p?XeJR#DzAm6R3fL8;LO}?BB;Ht1a<Ta
+z?h7R{X(g-ocFmnPoEXGW%wUveK=3%Rf(Up6hXq*ShDuKN`^PUFUrZI9tqb8_9otIv
+z9jhG6H<t!RZpDfNFI)^SbzHF*{ClrHUGVq*;O$!;eK~JmwV}yR-sa6~MQ<NnfX@EH
+zQ-^L%6vC(T69rfM75RJT?&VjL3*nMu+tS3cBe={3e}C)&m+#`tvZHMs7~IXf{T=%%
+zi_#yDYyV?qLu<#VKWQHE!&mN+9=Ppq7zweryBIq5G#s|FcPtE!iOr7(mCfrwUnKK7
+zFd}0<ab~NJGqeGBL4eJ*J*Vgbo_Sgo)G5I{hqx@r*<?kY6bJ>2T!TQ3VXdrJg-MOB
+z2?E)M%&=k6qZElW;&eZLS`!ZCf?Mkr+unY2rQWmRXt*%E%=y=G34P-6Svj4J$8**(
+z+7n43XBT8$*n?d$n6q>Wc(j8#TW2|%!3`#mvzdDc9h$+896n;ON5jVg%?3B4saeB9
+zFmiR)sGBF5OnS15DEMk<x?w5L4Sp;Zj!qa%#Ow((P8vd1o>k&;gG*ym8a!g86oZKy
+zJT`GsGptn<E25}#3T}fPIE($w5k*cK7PFf*!(vuPBlJ&X_BN@bQav4LKbuzu+tEW6
+zv@&MdHf%$)cr7!^vjiV#pwEl;8xGhO470u$80Q0UJpkXT1?-&*JTl(4z^qw3OxIec
+zmD#b{2%IyYE3(Z$yWAgiEHNMLdH0nysO3kPJX3P}KK6g;Upn?#<Z|SGOHZMt=X(Fw
+zLpO$QS-x}Kaow#i_Kp@?#_qSADzuy`wu~3u6M4&u?MTV($y-Xk9c#ealT1GR<GzD8
+zmEyjm1!q@2ym(+KebrZLY0Dp5?7wi*aJs*lznd<Ooi0l9a>L|3XX25Sx;?4|dtH9!
+m^1zkw)sD|!yxwt>ztLITF<ht{zGpkM=A$95^1%7cV*CjWpU!Cj
+
+literal 0
+HcmV?d00001
+
+diff --git a/client3.py b/client3.py
+index 3fc09b7..92a1692 100644
+--- a/client3.py
++++ b/client3.py
+@@ -32,17 +32,33 @@ N = 500
+ def getDataPoint(quote):
+     """ Produce all the needed values to generate a datapoint """
+     """ ------------- Update this function ------------- """
+-    stock = quote['stock']
+-    bid_price = float(quote['top_bid']['price'])
+-    ask_price = float(quote['top_ask']['price'])
+-    price = bid_price
++    stock = quote.get('stock') #get method to handle missing key to void the `KeyError: 'stock' error`
++
++    if not stock:
++        return None, None, None, None  # return all None if 'stock' is not present
++
++    try:
++        bid_price = float(quote['top_bid']['price']) if 'top_bid' in quote else None # to try to avoid `KeyError: 'top_bid'`
++    except (KeyError, ValueError):
++        bid_price = None
++
++    try:
++        ask_price = float(quote['top_ask']['price'])
++    except (KeyError, ValueError):
++        ask_price = None
++
++    price = (bid_price + ask_price) / 2 if bid_price is not None and ask_price is not None else None
+     return stock, bid_price, ask_price, price
+ 
+ 
+ def getRatio(price_a, price_b):
+     """ Get ratio of price_a and price_b """
+     """ ------------- Update this function ------------- """
+-    return 1
++    if price_b == 0:
++        # when price is 0 avoid throwing ZeroDivisionError
++        return None
++
++    return price_a/price_b
+ 
+ 
+ # Main
+@@ -52,8 +68,10 @@ if __name__ == "__main__":
+         quotes = json.loads(urllib.request.urlopen(QUERY.format(random.random())).read())
+ 
+         """ ----------- Update to get the ratio --------------- """
++        prices = {}
+         for quote in quotes:
+             stock, bid_price, ask_price, price = getDataPoint(quote)
++            prices[stock] = price
+             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
+ 
+-        print("Ratio %s" % getRatio(price, price))
++        print("Ratio %s" % getRatio(price["ABC"], price["DEF"]))
+diff --git a/client_test.py b/client_test.py
+index af2bf26..c05c9c4 100644
+--- a/client_test.py
++++ b/client_test.py
+@@ -8,6 +8,19 @@ class ClientTest(unittest.TestCase):
+       {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
+     ]
+     """ ------------ Add the assertion below ------------ """
++     # First Let's Calculate expected price for ABC and DEF
++    expected_price_ABC = (121.2 + 120.48) / 2
++    expected_price_DEF = (121.68 + 117.87) / 2
++
++    # Then let's Test getDataPoint function
++    stock_ABC, price_ABC = getDataPoint(quotes[0])
++    stock_DEF, price_DEF = getDataPoint(quotes[1])
++
++    self.assertEqual(stock_ABC, 'ABC')
++    self.assertAlmostEqual(price_ABC, expected_price_ABC, places=2)
++
++    self.assertEqual(stock_DEF, 'DEF')
++    self.assertAlmostEqual(price_DEF, expected_price_DEF, places=2)
+ 
+   def test_getDataPoint_calculatePriceBidGreaterThanAsk(self):
+     quotes = [
+@@ -16,10 +29,72 @@ class ClientTest(unittest.TestCase):
+     ]
+     """ ------------ Add the assertion below ------------ """
+ 
++  # we calculate expected price for ABC and DEF
++    expected_price_ABC = (119.2 + 120.48) / 2
++    expected_price_DEF = (121.68 + 117.87) / 2
++
++
++    # Test getDataPoint function
++    stock_ABC, price_ABC = getDataPoint(quotes[0])
++    stock_DEF, price_DEF = getDataPoint(quotes[1])
++
++    self.assertEqual(stock_ABC, 'ABC')
++    self.assertAlmostEqual(price_ABC, expected_price_ABC, places=2)
++
++    self.assertEqual(stock_DEF, 'DEF')
++    self.assertAlmostEqual(price_DEF, expected_price_DEF, places=2)
++
++
+ 
+   """ ------------ Add more unit tests ------------ """
++  # Test empty quotes
++  def test_getDataPoint_empty_quotes(self):
++      quotes = []
++      stock, bid_price, ask_price, price = getDataPoint({})
++      self.assertIsNone(stock)
++      self.assertIsNone(bid_price)
++      self.assertIsNone(ask_price)
++      self.assertIsNone(price)
+ 
++  # Test if missing keys in quotes
++  def test_getDataPoint_missing_keys(self):
++      quotes = [
++          {'top_ask': {'price': 121.2}, 'timestamp': '2019-02-11 22:06:30.572453', 'id': '0.109974697771', 'stock': 'ABC'},
++          {'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
++      ]
++      stock_ABC, bid_price_ABC, ask_price_ABC, price_ABC = getDataPoint(quotes[0])
++      stock_DEF, bid_price_DEF, ask_price_DEF, price_DEF = getDataPoint(quotes[1])
++      self.assertEqual(stock_ABC, 'ABC')
++      self.assertIsNone(bid_price_ABC)
++      self.assertIsNone(price_ABC)
++      self.assertEqual(stock_DEF, 'DEF')
++      self.assertIsNone(ask_price_DEF)
++      self.assertIsNone(price_DEF)
++
++    # Test how the function handles quotes with non-numeric bid and ask prices.
++  def test_getDataPoint_non_numeric_prices(self):
++    quotes = [
++        {'top_ask': {'price': 'invalid_price', 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 120.48, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
++        {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 'invalid_price', 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
++    ]
++    stock_ABC, bid_price_ABC, ask_price_ABC, price_ABC = getDataPoint(quotes[0])
++    stock_DEF, bid_price_DEF, ask_price_DEF, price_DEF = getDataPoint(quotes[1])
++    self.assertEqual(stock_ABC, 'ABC')
++    self.assertEqual(bid_price_ABC, 120.48)
++    self.assertIsNone(ask_price_ABC)
++    self.assertIsNone(price_ABC)
++    self.assertEqual(stock_DEF, 'DEF')
++    self.assertIsNone(bid_price_DEF)
++    self.assertEqual(ask_price_DEF, 121.68)
++    self.assertIsNone(price_DEF)
+ 
++# Additional Test for getRatio function 
++class RatioTest(unittest.TestCase):
++    def test_getRatio(self):
++        from client3 import getRatio
++        self.assertIsNone(getRatio(10, 0))
++        self.assertEqual(getRatio(10, 5), 2)
++        self.assertAlmostEqual(getRatio(3.5, 2.5), 1.4, places=2)
+ 
+ if __name__ == '__main__':
+     unittest.main()
+-- 
+2.34.1
+
